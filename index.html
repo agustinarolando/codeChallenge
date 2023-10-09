@@ -7,9 +7,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class="bg-dark">
-    <div class="container mt-5 mb-3 w-50">
+<body class="position-relative bg-dark">
+    <!-- Bienvenida -->
+    <div class="container mt-5 mb-3 text-center text-white">
+        <h2 style="color: steelblue;">Bienvenid@ al grupo 264</h2>
+        <small>Descubre nuestra clase</small>
+    </div>
+
+    <!-- Alertas -->
+    <div class="container fixed-top position-fixed start-0 translate-middle-y mt-5">
+        <div class="alert alert-success collapse sticky-sm-bottom" role="alert" id="sendAlert">
+            Envío de datos con éxito!
+        </div>
+        <div class="alert alert-danger collapse sticky-sm-top" role="alert" id="fillAlert">
+            Completa el formulario antes de enviarlo.
+        </div>
+        <div class="alert alert-primary collapse sticky-sm-top" role="alert" id="deleteAlert">
+            Acabas de eliminar un dato.
+        </div>
+    </div>
+
+    <!-- Campos de la lista -->
+    <div class="container mt-5 mb-2 d-flex justify-content-center">
+        <div class="card w-100" style="--bs-card-bg: #9cc2e1;">
+            <div class="row g-0 text-center">
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Nombre</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Apellido</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Grupo</strong></p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Sala</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Datos de la API -->
+    <div class="container" id="table">
+    </div>
+
+    <!-- Formulario -->
+    <div class="container mt-5 mb-5 w-50">
+        <hr style="color: white;">
+        <div style="color: #9cc2e1">
+            <h5>Si aún no estás en la lista, completa el formulario: </h4>
+        </div>
         <div class="input-group mb-3 text-white">
             <span for="name" class="input-group-text">Nombre</span>
             <input type="text" aria-label="First name" class="form-control" id="name">
@@ -22,27 +79,8 @@
             <span for="room" class="input-group-text">Sala</span>
             <input type="number" aria-label="Room" class="form-control" id="room">
         </div>
-        <button type="submit" class="btn btn-primary" id="send" data-bs-toggle="collapse" data-bs-target="#sendAlert">Enviar</button>
-    </div>
-    <div class="container">
-        <div class="alert alert-success collapse sticky-sm-top" role="alert" id="sendAlert">
-            Envío de datos con éxito!
-        </div>
-        <div class="alert alert-primary collapse sticky-sm-top" role="alert" id="deleteAlert">
-            Acabas de eliminar un dato.
-        </div>
-        <table class="table table-hover table-bordered table-striped">
-            <thead class="table-primary">
-              <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">Grupo</th>
-                <th scope="col">Sala</th>
-              </tr>
-            </thead>
-            <tbody id="tbody">
-            </tbody>
-        </table>
+        <button type="submit" class="btn btn-primary newBtn" id="send" data-bs-toggle="collapse" data-bs-target="#sendAlert #fillAlert">Enviar</button>
+        <hr style="color: white;">
     </div>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edita tu información - Code Challenge - JaP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./js/edit.js"></script>
+</head>
+<body class="position-relative bg-dark text-white">
+    <div class="container mt-5 mb-3">
+        <p class="fs-1">Edita tu información</p>
+        <hr>
+    </div>
+
+    <!-- Formulario -->
+    <div class="container mt-5 mb-3" style="width: 750px;">
+        <hr>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name">
+        </div>
+        <hr>
+        <div class="mb-3">
+            <label for="surname" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="surname">
+        </div>
+        <hr>
+        <div class="mb-3">
+            <label for="group" class="form-label">Grupo</label>
+            <input type="text" class="form-control" id="group">
+        </div>
+        <hr>
+        <div class="mb-3">
+            <label for="room" class="form-label">Sala</label>
+            <input type="text" class="form-control" id="room">
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-danger" id="exit" data-bs-toggle="collapse" data-bs-target="#exitAlert">Cancelar</button>
+            <button type="submit" class="btn btn-success" id="save" data-bs-toggle="collapse" data-bs-target="#editAlert">Guardar</button>
+        </div>
+    </div>
+
+    <!-- Alertas -->
+    <div class="container fixed-top position-fixed start-0 translate-middle-y mt-5">
+        <div class="alert alert-success collapse sticky-sm-top" role="alert" id="editAlert">
+            Los cambios se guardaron.
+        </div>
+        <div class="alert alert-warning collapse sticky-sm-top" role="alert" id="exitAlert">
+            Estás volviendo a la página principal.
+        </div>
+    </div>
+</body>
+</html>

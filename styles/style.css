@@ -1,0 +1,10 @@
+.newBtn {
+    --bs-btn-bg: #396A92;
+    --bs-btn-border-color: #396A92;
+    --bs-btn-hover-bg: #2b4f6e;
+    --bs-btn-hover-border-color: #2b4f6e;
+};
+
+.topCard {
+    --bs-card-bg: #396A92;
+};
